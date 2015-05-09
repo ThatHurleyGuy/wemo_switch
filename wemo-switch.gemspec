@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'wemo/version'
+require 'wemo_switch/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "wemo"
+  spec.name          = "wemo_switch"
   spec.version       = Version::VERSION
   spec.authors       = ["hurley and kjperry"]
   spec.email         = ["sean.hurley6@gmail.com"]

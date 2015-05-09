@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Wemo do
-  let(:wemo) { Wemo.new("192.168.1.150") }
+  let(:wemo) { Wemo.new(WEMO_ENDPOINT) }
 
   it "can get a light's status" do
     state = wemo.get_state
@@ -17,9 +17,9 @@ describe Wemo do
 
   it "will try multiple ports" do
     allow_any_instance_of(Savon::Client).to receive(:call).and_raise(Net::ReadTimeout)
-    expect_any_instance_of(Wemo).to receive(:_outlet_endpoint).with(49151).and_return("http://192.168.1.150:49151")
-    expect_any_instance_of(Wemo).to receive(:_outlet_endpoint).with(49153).and_return("http://192.168.1.150:49153")
-    expect_any_instance_of(Wemo).to receive(:_outlet_endpoint).with(49154).and_return("http://192.168.1.150:49154")
+    expect_any_instance_of(Wemo).to receive(:_outlet_endpoint).with(49151).and_return("http://#{WEMO_ENDPOINT}:49151")
+    expect_any_instance_of(Wemo).to receive(:_outlet_endpoint).with(49153).and_return("http://#{WEMO_ENDPOINT}:49153")
+    expect_any_instance_of(Wemo).to receive(:_outlet_endpoint).with(49154).and_return("http://#{WEMO_ENDPOINT}:49154")
 
     expect do
       wemo.toggle_outlet

@@ -53,7 +53,7 @@ class Wemo
     File.join(_config_dir, YAML.load_file(File.join(_config_dir, "wemo.yml"))['wsdl'])
   end
 
-  def _outlight_endpoint(port)
+  def _outlet_endpoint(port)
     "http://" + @endpoint + ":" + port.to_s + ROUTE
   end
 end

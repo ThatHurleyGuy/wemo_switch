@@ -1,6 +1,6 @@
 # Wemo
 
-TODO: Write a gem description
+This gem can be used to control wemo switch devices to control power outlets
 
 ## Installation
 
@@ -18,7 +18,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+wemo = Wemo.new("192.168.1.150") # Or any ip that the light controls
+wemo.get_state # true if it's powered on, false if it's off
+wemo.toggle_state # will turn the outlet on if it's currently off, and vice versa
+```
+
+## Running Tests
+The test suite assumes there is a wemo endpoint active on the curent network at `192.168.1.150` and will actively switch that endpoint on and off for integration tests. You can override this by setting the `WEMO_ENDPOINT` env variable to a different value like so:
+
+```
+WEMO_ENDPOINT=192.168.1.255 rake
+```
 
 ## Contributing
 

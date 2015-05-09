@@ -2,6 +2,6 @@ require 'spec_helper'
 
 describe Wemo do
   it "loads" do
-    1.should eq(1)
+    expect(1).to eq 1
   end
 end

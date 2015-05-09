@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake", "~> 10.4"
   spec.add_development_dependency "rspec", "~> 3.2"
+  spec.add_development_dependency "rspec-mocks", "~> 3.2"
   spec.add_dependency "savon", "~> 2.11"
 
   spec.required_ruby_version = ">= 2.0.0"

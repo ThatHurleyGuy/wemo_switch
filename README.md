@@ -6,7 +6,7 @@ This gem can be used to control wemo switch devices to control power outlets
 
 Add this line to your application's Gemfile:
 
-    gem 'wemo'
+    gem 'wemo_switch'
 
 And then execute:
 
@@ -14,12 +14,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install wemo
+    $ gem install wemo_switch
 
 ## Usage
 
 ```
-wemo = Wemo.new("192.168.1.150") # Or any ip that the light controls
+wemo = Wemo::Switch.new("192.168.1.150") # Or any ip that the light controls
 wemo.get_state # true if it's powered on, false if it's off
 wemo.toggle_state # will turn the outlet on if it's currently off, and vice versa
 ```
@@ -33,7 +33,7 @@ WEMO_ENDPOINT=192.168.1.255 rake
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/wemo/fork )
+1. Fork it ( https://github.com/[my-github-username]/wemo_switch/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

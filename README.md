@@ -21,7 +21,7 @@ Or install it yourself as:
 ```
 wemo = Wemo::Switch.new("192.168.1.150") # Or any ip that the light controls
 wemo.get_state # true if it's powered on, false if it's off
-wemo.toggle_state # will turn the outlet on if it's currently off, and vice versa
+wemo.toggle_outlet # will turn the outlet on if it's currently off, and vice versa
 ```
 
 ## Running Tests
